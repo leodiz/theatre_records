@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
 %vertical-align {
     position: relative;
     top: 50%;
@@ -6,45 +7,44 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-body{
-  font-family: 'PT Sans';
+body {
+    font-family: 'PT Sans';
     background-image: url(<%= asset_path 'debut_dark.png' %>);
-    &>.row{
+    & > .row {
         margin-top: 10px;
-        background-color:#ffffff;
+        background-color: #ffffff;
         padding: 10px;
         -webkit-box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow:    10px 10px 3px 0px rgba(0, 0, 0, 0.75);
-        box-shadow:         10px 10px 3px 0px rgba(0, 0, 0, 0.75);
-        a{
+        -moz-box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.75);
+        a {
             color: #680000;
 
-            &:hover{
+            &:hover {
                 color: #9e0000;
                 border-bottom: 1px dotted #a20000;
             }
         }
     }
-   h1{
-       font-family: 'PT Sans';
-       font-size: 30px;
-   }
-    h2{
+    h1 {
+        font-family: 'PT Sans';
+        font-size: 30px;
+    }
+    h2 {
         font-size: 24px;
     }
 
-    table{
+    table {
         width: 100%;
     }
 
     .top-bar {
-      font-size: 50px;
-
+        font-size: 50px;
 
     }
 
-    .field_with_errors{
-        input{
+    .field_with_errors {
+        input {
             background-color: #ff908e;
         }
 
@@ -54,10 +54,9 @@ body{
         background-color: #707070;
         padding: 5px;
         img {
-            width:200px; /* you can use % */
+            width: 200px; /* you can use % */
             height: auto;
         }
     }
-
 
 }

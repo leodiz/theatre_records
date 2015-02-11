@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require foundation
 //= require jquery_nested_form
+//= require chartkick
 //= require_tree .
 
 

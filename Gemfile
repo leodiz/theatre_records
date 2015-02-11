@@ -28,7 +28,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'zurb-foundation'
 gem 'nested_form', '~> 0.3.2'
 gem 'rails_12factor', '0.0.2'
-
+gem 'groupdate'
+gem 'chartkick'
 gem "carrierwave"
 
 # Use ActiveModel has_secure_password

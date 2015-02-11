@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :contracts
+  resources :contracts do
+    get 'report', to: 'contracts#report', as: 'report',on: :collection
+  end
 
   resources :performances
 
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get 'home/about'
+
+
 
   root 'home#index'
   resources :roles

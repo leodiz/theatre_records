@@ -40,8 +40,8 @@
       <li><%=link_to"Контракты",contracts_path,class: ""%></li>
       <li><%=link_to"Представления",performances_path,class: ""%></li>
       <li class="has-dropdown"> <a href="#">Отчеты</a>
-        <ul class="dropdown"> <li><a href="#">First link in dropdown</a></li>
-          <li class="active"><a href="#">Active link in dropdown</a></li>
+        <ul class="dropdown"> <li><%=link_to"Отчет о контрактах",report_contracts_path%></li>
+          <li class="active"><a href="#">Отчет об актерах</a></li>
         </ul> </li>
     </ul>
   </section>
