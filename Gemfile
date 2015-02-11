@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 #my gems
 gem 'zurb-foundation'
 gem 'nested_form', '~> 0.3.2'
-
+gem 'rails_12factor', '0.0.2'
 
 gem "carrierwave"
 
