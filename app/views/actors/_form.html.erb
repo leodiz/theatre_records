@@ -32,6 +32,12 @@
       <%= f.text_field :experence %>
     </div>
     <div class="field">
+      <%= f.label :image,"Фото" %>
+      <br>
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="field">
       <%= f.label :award,"Награды" %>
       <br>
       <%= f.collection_select :award_ids, Award.order(:title),:id,:title, include_blank: true %>

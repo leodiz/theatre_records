@@ -9,7 +9,7 @@
 body{
   font-family: 'PT Sans';
     background-image: url(<%= asset_path 'debut_dark.png' %>);
-    .row{
+    &>.row{
         margin-top: 10px;
         background-color:#ffffff;
         padding: 10px;
@@ -48,6 +48,15 @@ body{
             background-color: #ff908e;
         }
 
+    }
+
+    .img-container {
+        background-color: #707070;
+        padding: 5px;
+        img {
+            width:200px; /* you can use % */
+            height: auto;
+        }
     }
 
 
