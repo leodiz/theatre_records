@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="large-12 columns">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Имя:</strong>
+      <%= @actor.first_name %>
+    </p>
+
+    <p>
+      <strong>Фамилия:</strong>
+      <%= @actor.last_name %>
+    </p>
+
+    <p>
+      <strong>Дата рождения:</strong>
+      <%= @actor.birthday %>
+    </p>
+
+    <p>
+      <strong>Опыт работы:</strong>
+      <%= @actor.experence %>
+    </p>
+
+    <h2>Награды</h2>
+    <%@actor.awards.each do |award|%>
+    <p>
+      <%=award.title%> <%=award.date%>
+    </p>
+        <%end%>
+
+    <h2>Контракты:</h2>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Сумма</th>
+        <th>Дата</th>
+        <th>Роль</th>
+        <th>Представление</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @actor.contracts.each do |contract| %>
+          <tr>
+            <td><%= contract.sum %></td>
+            <td><%= contract.date %></td>
+            <td><%= contract.role.title %></td>
+            <td><%= contract.performance.datetime_with_play %></td>
+          </tr>
+
+      <% end %>
+      </tbody>
+    </table>
+
+   <p> <strong>Заработал за все время: <%=@actor.contracts.sum(:sum)%>. Всего сыграно спектаклей: <%=@actor.contracts.count%>.</strong></p>
+
+
+    <%= link_to 'Редактировать', edit_actor_path(@actor) %> |
+    <%= link_to 'Назад', actors_path %>
+  </div>
+</div>

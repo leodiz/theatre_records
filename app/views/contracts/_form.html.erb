@@ -1,0 +1,37 @@
+<%= form_for(@contract) do |f| %>
+  <% if @contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+
+      <ul>
+      <% @contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sum,"Сумма" %><br>
+    <%= f.text_field :sum %>
+  </div>
+  <div class="field">
+    <%= f.label :date,"Дата" %><br>
+    <%= f.date_select :date, start_year:1900, end_year:2015 %>
+  </div>
+  <div class="field">
+    <%= f.label :role,"Роль" %><br>
+    <%= f.collection_select :role_id, Role.order(:title),:id,:title, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :performance,"Представление" %><br>
+    <%= f.collection_select :performance_id, Performance.order(:datetime),:id, :datetime_with_play, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label :actor,"Актер" %><br>
+    <%= f.collection_select :actor_id, Actor.order(:first_name),:id,:first_last_name, include_blank: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Добавить / Изменить" %>
+  </div>
+<% end %>

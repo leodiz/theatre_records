@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @role.title %>
+</p>
+
+<p>
+  <strong>Play:</strong>
+  <%= @role.play %>
+</p>
+
+<%= link_to 'Редактировать', edit_role_path(@role) %> |
+<%= link_to 'Назад', roles_path %>

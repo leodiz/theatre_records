@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Список актеров</h1>
+
+    <table>
+      <thead>
+      <tr>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Дата рождения</th>
+        <th>Опыт работы</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @actors.each do |actor| %>
+          <tr>
+            <td><%= actor.first_name %></td>
+            <td><%= actor.last_name %></td>
+            <td><%= actor.birthday %></td>
+            <td><%= actor.experence %></td>
+            <td><%= link_to 'Показать', actor %></td>
+            <td><%= link_to 'Редактировать', edit_actor_path(actor) %></td>
+            <td><%= link_to 'Удалить', actor, method: :delete, data: {confirm: 'Вы уверены?'} %></td>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Добавить актера', new_actor_path %>
+  </div>
+</div>

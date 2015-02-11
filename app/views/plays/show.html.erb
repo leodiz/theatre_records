@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="large-12 columns">
+    <p id="notice"><%= notice %></p>
+<h1>Основная информация</h1>
+    <p>
+      <strong>Название:</strong>
+      <%= @play.title %>
+    </p>
+
+    <p>
+      <strong>Описание:</strong>
+      <%= @play.description %>
+    </p>
+
+    <p>
+      <strong>Автор:</strong>
+      <%= @play.author %>
+    </p>
+
+    <p>
+      <strong>Год написания:</strong>
+      <%= @play.year_of_foundation %>
+    </p>
+
+    <h2>Роли:</h2>
+
+    <%@play.roles.each do |role|%>
+      <p><%=role.title%></p>
+        <%end%>
+
+
+    <%= link_to 'Редактировать', edit_play_path(@play) %> |
+    <%= link_to 'Назад', plays_path %>
+  </div>
+</div>

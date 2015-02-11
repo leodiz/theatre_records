@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="large-12 columns">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sum:</strong>
+  <%= @contract.sum %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @contract.date %>
+</p>
+
+<p>
+  <strong>Роль:</strong>
+  <%= @contract.role.title %>
+</p>
+
+<p>
+  <strong>Представление:</strong>
+  <%= @contract.performance.datetime_with_play %>
+</p>
+
+<p>
+  <strong>Актер:</strong>
+  <%= @contract.actor.first_last_name %>
+</p>
+
+<%= link_to 'Редактировать', edit_contract_path(@contract) %> |
+<%= link_to 'Назад', contracts_path %>
+</div>
+    </div>

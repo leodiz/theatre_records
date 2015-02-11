@@ -1,0 +1,29 @@
+<%= form_for(@performance) do |f| %>
+  <% if @performance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@performance.errors.count, "error") %> Ошибка сохранения</h2>
+
+      <ul>
+      <% @performance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :datetime,"Дата" %><br>
+    <%= f.datetime_select :datetime %>
+  </div>
+  <div class="field">
+    <%= f.label :budget,"Бюджет" %><br>
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :play,"Спектакль" %><br>
+    <%= f.collection_select :play_id, Play.order(:title),:id,:title,include_blank:true%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Добавить / Изменить" %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="large-12 columns">
+<h1>Список представлений</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Дата и время</th>
+      <th>Бюджет</th>
+      <th>Спектакль</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @performances.each do |performance| %>
+      <tr>
+        <td><%= performance.datetime %></td>
+        <td><%= performance.budget %></td>
+        <td><%= performance.play.title %></td>
+        <td><%= link_to 'Показать', performance %></td>
+        <td><%= link_to 'Редактировать', edit_performance_path(performance) %></td>
+        <td><%= link_to 'Удалить', performance, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить представление', new_performance_path %>
+</div>
+    </div>

@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+%vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+body{
+  font-family: 'PT Sans';
+    background-image: url(<%= asset_path 'debut_dark.png' %>);
+    .row{
+        margin-top: 10px;
+        background-color:#ffffff;
+        padding: 10px;
+        -webkit-box-shadow: 10px 10px 3px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow:    10px 10px 3px 0px rgba(0, 0, 0, 0.75);
+        box-shadow:         10px 10px 3px 0px rgba(0, 0, 0, 0.75);
+        a{
+            color: #680000;
+
+            &:hover{
+                color: #9e0000;
+                border-bottom: 1px dotted #a20000;
+            }
+        }
+    }
+   h1{
+       font-family: 'PT Sans';
+       font-size: 30px;
+   }
+    h2{
+        font-size: 24px;
+    }
+
+    table{
+        width: 100%;
+    }
+
+    .top-bar {
+      font-size: 50px;
+
+
+    }
+
+
+}

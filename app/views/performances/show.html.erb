@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="large-12 columns">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Дата и время:</strong>
+  <%= @performance.datetime %>
+</p>
+
+<p>
+  <strong>Бюджет:</strong>
+  <%= @performance.budget %>
+</p>
+
+<p>
+  <strong>Спектакль:</strong>
+  <%= @performance.play.title %>
+</p>
+
+<%= link_to 'Редактировать', edit_performance_path(@performance) %> |
+<%= link_to 'Назад', performances_path %>
+</div>
+    </div>
