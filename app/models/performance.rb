@@ -1,7 +1,7 @@
 class Performance < ActiveRecord::Base
   has_many :contracts
   belongs_to :play
-  validates :play_id, presence: true
+  validates_presence_of :datetime, :budget, :play_id
   def datetime_with_play
     "#{play.title} / #{datetime}"
   end

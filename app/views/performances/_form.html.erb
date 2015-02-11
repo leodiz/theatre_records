@@ -1,7 +1,7 @@
 <%= form_for(@performance) do |f| %>
   <% if @performance.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@performance.errors.count, "error") %> Ошибка сохранения</h2>
+      <h2> Ошибка сохранения:</h2>
 
       <ul>
       <% @performance.errors.full_messages.each do |message| %>

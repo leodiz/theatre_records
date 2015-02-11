@@ -1,7 +1,7 @@
 <%= form_for(@contract) do |f| %>
   <% if @contract.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contract.errors.count, "error") %> prohibited this contract from being saved:</h2>
+      <h2> Ошибка сохранения:</h2>
 
       <ul>
       <% @contract.errors.full_messages.each do |message| %>

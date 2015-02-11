@@ -2,7 +2,7 @@
 
     <% if @play.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(@play.errors.count, "error") %> prohibited this play from being saved:</h2>
+          <h2>Ошибка сохранения:</h2>
 
           <ul>
             <% @play.errors.full_messages.each do |message| %>
