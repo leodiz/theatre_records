@@ -3,19 +3,19 @@
 
 
 <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
-<div class="panel"><%=pie_chart Contract.group_by_day(:date).count%></div>
+<div class="panel"><%=pie_chart Contract.group_by_month(:date).sum(:sum)%></div>
 
     <table>
       <thead>
       <tr>
         <th>Дата</th>
-        <th>Количество контрактов</th>
+        <th>Сумма контрактов</th>
         <th colspan="3"></th>
       </tr>
       </thead>
 
       <tbody>
-      <% Contract.group(:date).count.each do |contract| %>
+      <% Contract.group_by_month(:date).sum(:sum).each do |contract| %>
           <tr>
             <td><%= contract[0] %></td>
             <td><%= contract[1] %></td>

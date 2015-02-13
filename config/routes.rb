@@ -3,11 +3,15 @@ Rails.application.routes.draw do
     get 'report', to: 'contracts#report', as: 'report',on: :collection
   end
 
-  resources :performances
+  resources :performances do
+    get 'report', to: 'performances#report', as: 'report',on: :collection
+  end
 
   resources :awards
 
-  resources :actors
+  resources :actors do
+    get 'report', to: 'actors#report', as: 'report',on: :collection
+  end
 
   get 'home/index'
 
