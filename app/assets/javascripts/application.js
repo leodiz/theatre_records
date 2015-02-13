@@ -15,6 +15,7 @@
 //= require foundation
 //= require jquery_nested_form
 //= require jsapi
+//= require highcharts
 //= require chartkick
 //= require_tree .
 

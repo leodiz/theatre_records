@@ -65,7 +65,7 @@
       <% end %>
       </tbody>
     </table>
-
+    <%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
     <div class="panel chart"><%=line_chart  @actor.contracts.group_by_month(:date).sum(:sum)%></div>
 
     <p><strong>Заработал за все время: <%= @actor.contracts.sum(:sum) %>. Всего сыграно
