@@ -66,6 +66,8 @@
       </tbody>
     </table>
 
+    <div class="panel chart"><%=line_chart  @actor.contracts.group_by_month(:date).sum(:sum)%></div>
+
     <p><strong>Заработал за все время: <%= @actor.contracts.sum(:sum) %>. Всего сыграно
       спектаклей: <%= @actor.contracts.count %>.</strong></p>
 

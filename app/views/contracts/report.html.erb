@@ -2,7 +2,6 @@
   <div class="large-12 columns">
 
 
-<%= javascript_include_tag "http://www.google.com/jsapi", "chartkick" %>
 <div class="panel"><%=pie_chart Contract.group_by_month(:date).sum(:sum)%></div>
 
     <table>
